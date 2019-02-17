@@ -1,11 +1,11 @@
 theme: jekyll-theme-primer
-title: Margo & Trevor
+title: MARGO & TREVOR
 navbar-links:
-    HOME: "home"
-    SCHEDULE: "schedule"
-    TRAVEL: "travel"
-    REGISTRY: "registry"
-    WEDDING PARTY: "weddingparty"
+    HOME: "index.md"
+    #SCHEDULE: "schedule"
+    TRAVEL: "travel.md"
+    REGISTRY: "registry.md"
+    #WEDDING PARTY: "weddingparty"
     PHOTOS: "photos"
-    THINGS TO DO: "thingstodo"
-    FAQS: "faqs"
+    THINGS TO DO: "thingstodo.md"
+    #FAQS: "faqs"
