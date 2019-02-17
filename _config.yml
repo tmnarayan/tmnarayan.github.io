@@ -1,11 +1,11 @@
 theme: jekyll-theme-cayman
 title: Margo & Trevor
 navbar-links:
-    Home: "home"
-    Schedule: "schedule"
-    Travel: "travel"
-    Registry: "registry"
-    Wedding Party: "weddingparty"
-    Photos: "photos"
-    Things to Do: "thingstodo"
-    FAQs: "faqs"
+    HOME: "home"
+    SCHEDULE: "schedule"
+    TRAVEL: "travel"
+    REGISTRY: "registry"
+    WEDDING PARTY: "weddingparty"
+    PHOTOS: "photos"
+    THINGS TO DO: "thingstodo"
+    FAQS: "faqs"
