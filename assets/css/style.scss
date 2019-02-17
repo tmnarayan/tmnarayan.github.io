@@ -7,6 +7,7 @@
 }
 
 $body-font: "lily";
+$body-font-size: 25px;
 
 @import "{{ site.theme }}";
 
@@ -16,4 +17,8 @@ $body-font: "lily";
 
 .navlink {
 	display:inline;
+}
+
+h1 {
+	font-size: 75px;
 }
