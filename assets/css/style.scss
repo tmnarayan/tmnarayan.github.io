@@ -1,23 +1,14 @@
 ---
 ---
 
-@import "{{ site.theme }}";
-
 @font-face {
 	font-family: "lily";
 	src: url("/assets/fonts/Tigerlily.ttf");
 }
 
-body {
-  font-family: "lily";
-  font-size: 25px;
-  color: #000;
-}
+$body-font: "lily";
 
-header h1 {
-	font-family: "lily";
-	font-size: 75px;
-}
+@import "{{ site.theme }}";
 
 .navbar {
 	list-style: none;
