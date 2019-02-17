@@ -1,2 +1,11 @@
 theme: jekyll-theme-tactile
 title: Margo & Trevor
+navbar-links:
+    Home: "home"
+    Schedule: "schedule"
+    Travel: "travel"
+    Registry: "registry"
+    Wedding Party: "weddingparty"
+    Photos: "photos"
+    Things to Do: "thingstodo"
+    FAQs: "faqs"
