@@ -1,6 +1,5 @@
 ---
 layout: home
 ---
-### 2019 / 10 / 12
-### CINCINNATI, OH
+### 2019 / 10 / 12 -- CINCINNATI, OH
 ![Two boos](assets/images/wide.jpg)
