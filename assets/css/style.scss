@@ -6,17 +6,24 @@
 	src: url("/assets/fonts/Tigerlily.ttf");
 }
 
-$body-font: "lily";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+$body-font: "Roboto Condensed", sans-serif;
 $body-font-size: 25px;
-$font-size-small: 25px;
 $h4-size: 25px;
 
-@import "{{ site.theme }}";
+.title {
+	font-family: "lily";
+}
 
 .navbar {
 	list-style: none;
+	padding-left: 0;
+	font-family: "lily";
 }
 
 .navlink {
 	display:inline;
 }
+
+@import "{{ site.theme }}";
