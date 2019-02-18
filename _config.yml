@@ -1,7 +1,7 @@
 theme: jekyll-theme-primer
 title: MARGO & TREVOR
 navbar-links:
-    HOME: "margo-trevor.com"
+    HOME: "index"
     #SCHEDULE: "schedule"
     TRAVEL: "travel"
     REGISTRY: "registry"

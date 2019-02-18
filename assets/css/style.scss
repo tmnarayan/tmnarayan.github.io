@@ -8,6 +8,8 @@
 
 $body-font: "lily";
 $body-font-size: 25px;
+$font-size-small: 25px;
+$h4-size: 25px;
 
 @import "{{ site.theme }}";
 
@@ -17,8 +19,4 @@ $body-font-size: 25px;
 
 .navlink {
 	display:inline;
-}
-
-h1 {
-	font-size: 75px;
 }
