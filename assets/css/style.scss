@@ -18,12 +18,20 @@ $h4-size: 25px;
 
 .navbar {
 	list-style: none;
-	padding-left: 0;
-	font-family: "lily";
 }
 
 .navlink {
 	display:inline;
+}
+
+#home {
+	font-family: "lily";
+	text-align: "left";
+}
+
+#nav {
+	padding-left: 0;
+	font-family: "lily";
 }
 
 @import "{{ site.theme }}";

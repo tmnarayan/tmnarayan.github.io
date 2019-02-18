@@ -1,6 +1,6 @@
 ---
-layout: default
+layout: home
 ---
-<p style="text-align: left; font-family=lily;"> # 2019 / 10 / 12 </p>
-<p style="text-align: left; font-family=lily;"> # CINCINNATI, OH </p>
+### 2019 / 10 / 12
+### CINCINNATI, OH
 ![Two boos](assets/images/wide.jpg)
