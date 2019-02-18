@@ -5,7 +5,7 @@ Thank you for traveling to join us for our wedding! We’ll be thrilled to welco
 
 ## Hotels
 
-* Our ceremony and reception will take place at the [Hotel Covington](https://goo.gl/maps/1QZaNprSPTn), located just across the river from downtown Cincinnati.
+Our ceremony and reception will take place at the [Hotel Covington](https://goo.gl/maps/1QZaNprSPTn), located just across the river from downtown Cincinnati.
 
 * We have a block of rooms reserved at the hotel. Please [click here](https://res.windsurfercrs.com/ibe/details.aspx?propertyid=14389&nights=1&checkin=10/11/2019&group=1019WNWED) to book with our group rate or call 859-905-6700 and ask to book with the Werner-Narayan wedding rate.
 
