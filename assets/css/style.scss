@@ -12,6 +12,8 @@ $body-font: "Roboto Condensed", sans-serif;
 $body-font-size: 25px;
 $h4-size: 25px;
 
+@import "{{ site.theme }}";
+
 .title {
 	font-family: "lily";
 }
@@ -32,5 +34,3 @@ $h4-size: 25px;
 	text-align: left;
 	font-size: 1.00em;
 }
-
-@import "{{ site.theme }}";
