@@ -38,3 +38,17 @@ a:hover {
 	text-align: left;
 	font-size: 1.00em;
 }
+
+#photos {
+	display: flex;
+}
+
+img {
+	display: block;
+	flex-shrink: 1;
+	min-width: 0;
+	height: auto;
+	width: 100%;
+	align-self: flex-start;
+	margin-right: .5rem;
+}
