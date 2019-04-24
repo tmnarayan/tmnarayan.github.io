@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: photos
 ---
 ![Smile](assets/images/smile.jpg)
 ![Kiss](assets/images/kiss.jpg)
