@@ -39,8 +39,9 @@ a:hover {
 	font-size: 1.00em;
 }
 
-#photos {
+.hasImage {
 	display: flex;
+	width: 100%;
 }
 
 img {
