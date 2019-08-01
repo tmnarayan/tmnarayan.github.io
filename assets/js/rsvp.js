@@ -49,7 +49,7 @@ function start() {
                 var saturday_html = generateSelectorHtml('Wedding & Receiption', row[4], 'saturday');
                 $('#forms').html(saturday_html);
               }
-              $('#forms').append("Please inform us of any dietary restrictions: <textarea id='diet'></textarea>");
+              $('#forms').append("<br><br>Please inform us of any dietary restrictions: <textarea id='diet'></textarea>");
               $('#forms').append("<button type='button' onclick='submitRSVP()'>Submit RSVP!</button>");
               break;
           }
