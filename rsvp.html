@@ -36,8 +36,12 @@
                     $('#result').replaceWith(row[0] + ", party of " + row[3] +
                       "\nWe're delighted to welcome you on our special day!" +
                       "\nHow many of you will be joining for each event?");
-                    var rsvp_html = generateSelectorHtml(row[3]);
-                    $('#rsvp').append(rsvp_html);
+                    var receiption_html = generateSelectorHtml(row[3]);
+                    var wedding_html = generateSelectorHtml(row[4]);
+                    var brunch_html = generateSelectorHtml(row[5]);
+                    $('#rsvp').replaceWith(receiption_html);
+                    $('#rsvp').append(wedding_html);
+                    $('#rsvp').append(brunch_html);
                     break;
                 }
               }
@@ -54,7 +58,7 @@
     <input id="lastname" type="text">
     <button type="button" onclick="searchInvites()">Click Me!</button>
     <br><br>
-    <div id='result'/>
-    <div id='rsvp'/>
+    <div id='result'></div>
+    <div id='rsvp'></div>
   </body>
 </html>
