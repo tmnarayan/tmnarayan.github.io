@@ -8,7 +8,10 @@ function generateSelectorHtml(label, numGuests, id) {
 }
 
 function searchInvites() {
-  var searchUrl = "https://us-central1-round-carver-683.cloudfunctions.net/searchInvites";
+  var firstname = $('#firstname').val();
+  var lastname = $('#lastname').val();
+  var searchUrl = "https://us-central1-round-carver-683.cloudfunctions.net" +
+    "/searchInvites?firstname=" + firstname + "&lastname=" + lastname; 
   $.get(searchUrl, function(data, status) {
     var invite = data;
     $('#welcome').html(row[0] + ":\n" +
@@ -36,5 +39,5 @@ function searchInvites() {
 }
 
 function submitRSVP() {
-  
+
 }
