@@ -3,6 +3,13 @@
     <script src="https://apis.google.com/js/api.js"></script>
     <script type="text/javascript" src='/assets/js/jquery-3.4.0.min.js'></script>
     <script>
+      function generateSelectorHtml(numGuests) {
+        var base = "<select>";
+        for (i = 0; i < numGuests; i++) {
+          base += "<option value='" + "numGuests'>" + numGuests + "</option>";
+        }
+        base += "</select>";
+      }
       function searchInvites() {
         // Loads the JavaScript client library and invokes `start` afterwards.
         gapi.load('client', start);
@@ -25,7 +32,11 @@
                 var row = range.values[i];
                 if (entered_firstname === row[1]
                   && entered_lastname === row[2]) {
-                    $('#body').append("Found: " + row[0]);
+                    $('#result').replaceWith(row[0], "party of " row[3].
+                      "We're delighted to welcome you on our special day. " +
+                      "How many of you will be joining for each event?");
+                    var rsvp_html = generateSelectorHtml(row[3]);
+                    $('#rsvp').append(rvsp_html);
                 }
               }
             }
@@ -40,5 +51,7 @@
     <input id="firstname" type="text">
     <input id="lastname" type="text">
     <button type="button" onclick="searchInvites()">Click Me!</button>
+    <div id='result'/>
+    <div id='rsvp'/>
   </body>
 </html>
