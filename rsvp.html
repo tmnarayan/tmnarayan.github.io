@@ -32,7 +32,7 @@
                 var row = range.values[i];
                 if (entered_firstname === row[1]
                   && entered_lastname === row[2]) {
-                    $('#result').replaceWith(row[0], "party of " row[3].
+                    $('#result').replaceWith(row[0] + "party of " + row[3] + 
                       "We're delighted to welcome you on our special day. " +
                       "How many of you will be joining for each event?");
                     var rsvp_html = generateSelectorHtml(row[3]);
