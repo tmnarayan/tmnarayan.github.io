@@ -5,7 +5,7 @@
     <script>
       function generateSelectorHtml(numGuests) {
         var base = "<select>";
-        for (i = 0; i < numGuests; i++) {
+        for (i = 0; i <= numGuests; i++) {
           base += "<option value='" + i + "'>" + i + "</option>";
         }
         base += "</select>";
@@ -33,13 +33,13 @@
                 var row = range.values[i];
                 if (entered_firstname === row[1]
                   && entered_lastname === row[2]) {
-                    $('#result').replaceWith(row[0] + ", party of " + row[3] +
+                    $('#result').html(row[0] + ", party of " + row[3] +
                       "\nWe're delighted to welcome you on our special day!" +
                       "\nHow many of you will be joining for each event?");
                     var receiption_html = generateSelectorHtml(row[3]);
                     var wedding_html = generateSelectorHtml(row[4]);
                     var brunch_html = generateSelectorHtml(row[5]);
-                    $('#rsvp').replaceWith(receiption_html);
+                    $('#rsvp').html(receiption_html);
                     $('#rsvp').append(wedding_html);
                     $('#rsvp').append(brunch_html);
                     break;
