@@ -13,16 +13,9 @@ function testAjax (data) {
 
 function searchInvites() {
   // Loads the JavaScript client library and invokes `start` afterwards.
-  var searchUrl = "https://us-central1-round-carver-683.cloudfunctions.net/helloGET";
-  $.ajax({
-    url: searchUrl,
-    datatype: "jsonp",
-    success: function(response) {
-      console.log(response);
-    }
-  });
-  $.get(searchUrl, function(data, status) {
-    $('#rsvp').append(data);
+  var searchUrl = "https://us-central1-round-carver-683.cloudfunctions.net/helloGET?callback=?";
+  $.getJSON(searchUrl, function(data, status) {
+    console.log(data + status);
   });
   gapi.load('client', start);
 }
