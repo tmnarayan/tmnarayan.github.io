@@ -11,9 +11,9 @@ function searchInvites() {
   var firstname = $('#firstname').val();
   var lastname = $('#lastname').val();
   var searchUrl = "https://us-central1-round-carver-683.cloudfunctions.net" +
-    "/searchInvites?firstname=" + firstname + "&lastname=" + lastname; 
+    "/searchInvites?firstname=" + firstname + "&lastname=" + lastname;
   $.get(searchUrl, function(data, status) {
-    var invite = data;
+    var row = data;
     $('#welcome').html(row[0] + ":\n" +
       "\nWe're delighted to welcome you on our special day!" +
       "\nHow many guests from your party should we expect?");
