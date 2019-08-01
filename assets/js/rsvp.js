@@ -28,7 +28,7 @@ function start() {
           var row = range.values[i];
           if (entered_firstname === row[1]
             && entered_lastname === row[2]) {
-              $('#welcome').html(row[0] + ", party of " + row[3] +
+              $('#welcome').html(row[0] + 
                 "\nWe're delighted to welcome you on our special day!" +
                 "\nHow many of you will be joining for each event?");
               if (row[3] > 0) {
