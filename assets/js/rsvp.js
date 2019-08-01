@@ -7,9 +7,20 @@ function generateSelectorHtml(label, numGuests, id) {
   return base;
 }
 
+function testAjax (data) {
+  $('#rsvp').append(data);
+}
+
 function searchInvites() {
   // Loads the JavaScript client library and invokes `start` afterwards.
-  var searchUrl = "https://us-central1-round-carver-683.cloudfunctions.net/helloGET";
+  var searchUrl = "us-central1-round-carver-683.cloudfunctions.net/helloGET";
+  $.ajax({
+    url: searchUrl,
+    datatype: "jsonp",
+    success: function(response) {
+      console.log(response);
+    }
+  });
   $.get(searchUrl, function(data, status) {
     $('#rsvp').append(data);
   });
