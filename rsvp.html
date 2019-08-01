@@ -12,7 +12,7 @@
           // The method name `language.translations.list` comes from the API discovery.
           return gapi.client.sheets.spreadsheets.values.get({
             spreadsheetId: '1TGQBJ7ODbCc82ZvVSRw702Rf8VSzwOL7iIMWEKBbBE8',
-            range: 'Class Data!A2:E',
+            range: 'Expanded!A:E',
           }).then(function(response) {
             var range = response.result;
             if (range.values.length > 0) {
