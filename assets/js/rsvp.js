@@ -1,5 +1,5 @@
-function generateSelectorHtml(numGuests) {
-  var base = "<select>";
+function generateSelectorHtml(event, numGuests) {
+  var base = event + ": <select>";
   for (i = 0; i <= numGuests; i++) {
     base += "<option value='" + i + "'>" + i + "</option>";
   }
@@ -32,9 +32,9 @@ function start() {
                 "\nWe're delighted to welcome you on our special day!" +
                 "\nHow many of you will be joining for each event?");
               if (row[3] > 0) {
-                var friday_html = generateSelectorHtml(row[3]);
-                var saturday_html = generateSelectorHtml(row[4]);
-                var sunday_html = generateSelectorHtml(row[5]);
+                var friday_html = generateSelectorHtml('Rehearsal Dinner', row[3]);
+                var saturday_html = generateSelectorHtml('Wedding & Receiption', row[4]);
+                var sunday_html = generateSelectorHtml('Sunday Brunch', row[5]);
                 $('#forms').html(friday_html);
                 $('#forms').append(saturday_html);
                 $('#forms').append(sunday_html);
