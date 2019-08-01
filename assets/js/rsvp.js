@@ -7,12 +7,11 @@ function generateSelectorHtml(label, numGuests, id) {
   return base;
 }
 
-function testAjax (data) {
+function testAjax(data) {
   $('#rsvp').append(data);
 }
 
 function searchInvites() {
-  // Loads the JavaScript client library and invokes `start` afterwards.
   var searchUrl = "https://us-central1-round-carver-683.cloudfunctions.net/helloGET?callback=?";
   $.getJSON(searchUrl, function(data, status) {
     console.log(data + status);
