@@ -13,7 +13,7 @@ function testAjax (data) {
 
 function searchInvites() {
   // Loads the JavaScript client library and invokes `start` afterwards.
-  var searchUrl = "us-central1-round-carver-683.cloudfunctions.net/helloGET";
+  var searchUrl = "https://us-central1-round-carver-683.cloudfunctions.net/helloGET";
   $.ajax({
     url: searchUrl,
     datatype: "jsonp",
