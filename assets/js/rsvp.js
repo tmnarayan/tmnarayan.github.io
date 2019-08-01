@@ -1,15 +1,17 @@
-function generateSelectorHtml(event, numGuests) {
-  var base = event + ": <select>";
+function generateSelectorHtml(event, numGuests, id) {
+  var base = event + ": <select id='" + id + "'>";
   for (i = 0; i <= numGuests; i++) {
     base += "<option value='" + i + "'>" + i + "</option>";
   }
   base += "</select>";
   return base;
 }
+
 function searchInvites() {
   // Loads the JavaScript client library and invokes `start` afterwards.
   gapi.load('client', start);
 }
+
 function start() {
   // Initializes the client with the API key and the Translate API.
   gapi.client.init({
@@ -32,9 +34,9 @@ function start() {
                 "\nWe're delighted to welcome you on our special day!" +
                 "\nHow many of you will be joining?");
               if (row[3] > 0) {
-                var friday_html = generateSelectorHtml('Rehearsal Dinner', row[3]);
-                var saturday_html = generateSelectorHtml('Wedding & Receiption', row[4]);
-                var sunday_html = generateSelectorHtml('Sunday Brunch', row[5]);
+                var friday_html = generateSelectorHtml('Rehearsal Dinner', row[3], 'friday');
+                var saturday_html = generateSelectorHtml('Wedding & Receiption', row[4], 'saturday');
+                var sunday_html = generateSelectorHtml('Sunday Brunch', row[5], 'sunday');
                 $('#forms').html(friday_html);
                 $('#forms').append(saturday_html);
                 $('#forms').append(sunday_html);
@@ -47,6 +49,8 @@ function start() {
                 var saturday_html = generateSelectorHtml(row[4]);
                 $('#forms').html(saturday_html);
               }
+              $('#forms').append("Please inform us of any dietary restrictions: <textarea id='diet'></textarea>");
+              $('#forms').append("<button type='button' onclick='submitRSVP()'>Submit RSVP!</button>");
               break;
           }
         }
@@ -55,4 +59,8 @@ function start() {
       console.log(response.result.error.message);
     });
   });
+}
+
+function submitRSVP() {
+
 }
