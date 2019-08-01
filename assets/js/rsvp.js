@@ -30,9 +30,9 @@ function start() {
           var row = range.values[i];
           if (entered_firstname === row[1]
             && entered_lastname === row[2]) {
-              $('#welcome').html(row[0] +
+              $('#welcome').html(row[0] + ":\n" +
                 "\nWe're delighted to welcome you on our special day!" +
-                "\nHow many of you will be joining?");
+                "\nHow many guests from your party should we expect?");
               if (row[3] > 0) {
                 var friday_html = generateSelectorHtml('Rehearsal Dinner', row[3], 'friday');
                 var saturday_html = generateSelectorHtml('Wedding & Receiption', row[4], 'saturday');
@@ -49,7 +49,7 @@ function start() {
                 var saturday_html = generateSelectorHtml('Wedding & Receiption', row[4], 'saturday');
                 $('#forms').html(saturday_html);
               }
-              $('#forms').append("<br><br>Please inform us of any dietary restrictions: <textarea id='diet'></textarea>");
+              $('#forms').append("<br><br>Please inform us of any dietary restrictions: <input id='diet'></input>");
               $('#forms').append("<button type='button' onclick='submitRSVP()'>Submit RSVP!</button>");
               break;
           }
