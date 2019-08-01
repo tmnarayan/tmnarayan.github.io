@@ -1,5 +1,5 @@
-function generateSelectorHtml(event, numGuests, id) {
-  var base = event + ": <select id='" + id + "'>";
+function generateSelectorHtml(label, numGuests, id) {
+  var base = label + ": <select id='" + id + "'>";
   for (i = 0; i <= numGuests; i++) {
     base += "<option value='" + i + "'>" + i + "</option>";
   }
@@ -41,12 +41,12 @@ function start() {
                 $('#forms').append(saturday_html);
                 $('#forms').append(sunday_html);
               } else if (row[3] == 0 && row[5] > 0) {
-                var saturday_html = generateSelectorHtml(row[4]);
-                var sunday_html = generateSelectorHtml(row[5]);
+                var saturday_html = generateSelectorHtml('Wedding & Receiption', row[4], 'saturday');
+                var sunday_html = generateSelectorHtml('Sunday Brunch', row[5], 'sunday');
                 $('#forms').html(saturday_html);
                 $('#forms').append(sunday_html);
               } else {
-                var saturday_html = generateSelectorHtml(row[4]);
+                var saturday_html = generateSelectorHtml('Wedding & Receiption', row[4], 'saturday');
                 $('#forms').html(saturday_html);
               }
               $('#forms').append("Please inform us of any dietary restrictions: <textarea id='diet'></textarea>");
