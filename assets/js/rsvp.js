@@ -28,15 +28,25 @@ function start() {
           var row = range.values[i];
           if (entered_firstname === row[1]
             && entered_lastname === row[2]) {
-              $('#result').html(row[0] + ", party of " + row[3] +
+              $('#welcome').html(row[0] + ", party of " + row[3] +
                 "\nWe're delighted to welcome you on our special day!" +
                 "\nHow many of you will be joining for each event?");
-              var receiption_html = generateSelectorHtml(row[3]);
-              var wedding_html = generateSelectorHtml(row[4]);
-              var brunch_html = generateSelectorHtml(row[5]);
-              $('#rsvp').html(receiption_html);
-              $('#rsvp').append(wedding_html);
-              $('#rsvp').append(brunch_html);
+              if (row[3] > 0) {
+                var friday_html = generateSelectorHtml(row[3]);
+                var saturday_html = generateSelectorHtml(row[4]);
+                var sunday_html = generateSelectorHtml(row[5]);
+                $('#forms').html(friday_html);
+                $('#forms').append(saturday_html);
+                $('#forms').append(sunday_html);
+              } else if (row[3] == 0 && row[5] > 0) {
+                var saturday_html = generateSelectorHtml(row[4]);
+                var sunday_html = generateSelectorHtml(row[5]);
+                $('#forms').html(saturday_html);
+                $('#forms').append(sunday_html);
+              } else {
+                var saturday_html = generateSelectorHtml(row[4]);
+                $('#forms').html(saturday_html);
+              }
               break;
           }
         }
