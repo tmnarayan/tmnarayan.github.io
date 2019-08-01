@@ -33,8 +33,8 @@
                 if (entered_firstname === row[1]
                   && entered_lastname === row[2]) {
                     $('#result').replaceWith(row[0] + "party of " + row[3] +
-                      "We're delighted to welcome you on our special day. " +
-                      "How many of you will be joining for each event?");
+                      "\nWe're delighted to welcome you on our special day!" +
+                      "\nHow many of you will be joining for each event?");
                     var rsvp_html = generateSelectorHtml(row[3]);
                     $('#rsvp').append(rsvp_html);
                 }
@@ -51,6 +51,7 @@
     <input id="firstname" type="text">
     <input id="lastname" type="text">
     <button type="button" onclick="searchInvites()">Click Me!</button>
+    <br><br>
     <div id='result'/>
     <div id='rsvp'/>
   </body>
