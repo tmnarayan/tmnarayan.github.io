@@ -12,8 +12,8 @@ function testAjax(data) {
 }
 
 function searchInvites() {
-  var searchUrl = "https://us-central1-round-carver-683.cloudfunctions.net/helloGET?callback=?";
-  $.getJSON(searchUrl, function(data, status) {
+  var searchUrl = "https://us-central1-round-carver-683.cloudfunctions.net/searchInvites";
+  $.get(searchUrl, function(data, status) {
     console.log(data + status);
   });
   gapi.load('client', start);
@@ -66,8 +66,4 @@ function start() {
       console.log(response.result.error.message);
     });
   });
-}
-
-function submitRSVP() {
-
 }
