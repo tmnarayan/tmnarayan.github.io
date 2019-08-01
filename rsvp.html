@@ -6,7 +6,7 @@
       function generateSelectorHtml(numGuests) {
         var base = "<select>";
         for (i = 0; i < numGuests; i++) {
-          base += "<option value='" + "numGuests'>" + numGuests + "</option>";
+          base += "<option value='" + i + "'>" + i + "</option>";
         }
         base += "</select>";
         return base;
@@ -29,15 +29,16 @@
             if (range.values.length > 0) {
               var entered_firstname = $('#firstname').val();
               var entered_lastname = $('#lastname').val();
-              for (i = 1; i < range.values.length; i++) {
+              for (i = 0; i < range.values.length; i++) {
                 var row = range.values[i];
                 if (entered_firstname === row[1]
                   && entered_lastname === row[2]) {
-                    $('#result').replaceWith(row[0] + "party of " + row[3] +
+                    $('#result').replaceWith(row[0] + ", party of " + row[3] +
                       "\nWe're delighted to welcome you on our special day!" +
                       "\nHow many of you will be joining for each event?");
                     var rsvp_html = generateSelectorHtml(row[3]);
                     $('#rsvp').append(rsvp_html);
+                    break;
                 }
               }
             }
