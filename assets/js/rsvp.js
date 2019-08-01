@@ -9,15 +9,9 @@ function generateSelectorHtml(label, numGuests, id) {
 
 function searchInvites() {
   // Loads the JavaScript client library and invokes `start` afterwards.
-  $.ajax({
-    url:"https://us-central1-round-carver-683.cloudfunctions.net/helloGET",
-    dataType: 'jsonp',
-    success:function(json) {
-      $('#rsvp').append(json);
-    },
-    error:function() {
-      console.log("Error");
-    }
+  var searchUrl = "https://us-central1-round-carver-683.cloudfunctions.net/helloGET";
+  $.get(searchUrl, function(data, status) {
+    $('#rsvp').append(data);
   });
   gapi.load('client', start);
 }
