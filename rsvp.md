@@ -1,15 +1,13 @@
 ---
 layout: rsvp
 ---
-If you've somehow reached this page, please note that it is currently not working!
-
-Do not RSVP yet, please. :)
+We're excited to welcome you to Cincinnati!
 
 <input id="firstname" type="text" placeholder="First Name" style="margin-right:20px;">
 <input id="lastname" type="text" placeholder="Last Name" style="margin-right:20px;">
 <button type="button" id="findinvite">Find Invitation</button>
 <div id='welcome' style="display: none; margin-top:20px;">
-We're delighted to welcome you on our special day!<br>
+We're hope you'll be able to join us on our special day!<br>
 How many guests from your party should we expect?
 </div>
 <div id='forms'></div>

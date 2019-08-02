@@ -24,16 +24,16 @@ exports.searchInvites = (req, res) => {
     const storage = new Storage();
     const bucketName = 'bop-hif-aism';
     const fileName = 'guestlist.csv';
-    var firstname = new String(req.query.firstname).toLowerCase();
-    var lastname = new String(req.query.lastname).toLowerCase();
+    var firstname = new String(req.query.firstname).toLowerCase().trim();
+    var lastname = new String(req.query.lastname).toLowerCase().trim();
 
     storage.bucket(bucketName).file(fileName).download(function(err, contents) {
       const parse = require('csv-parse');
       parse(contents, function(err, output) {
         for (i = 0; i < output.length; i++) {
           var row = output[i];
-          if (firstname === row[1].toLowerCase()
-              && lastname === row[2].toLowerCase()) {
+          if (firstname === row[1].toLowerCase().trim()
+              && lastname === row[2].toLowerCase().trim()) {
             res.send(row);
             return;
           }
@@ -61,13 +61,17 @@ exports.saveRSVP = (req, res) => {
     res.set('Access-Control-Max-Age', '3600');
     res.status(204).send('');
   } else {
-    // TODO, add error handling
-    let name = req.body.name;
-    rsvpMap = buildRsvpMap(req.body)
+    try {
+      let name = req.body.name;
+      let rsvpMap = buildRsvpMap(req.body)
 
-    let docRef = db.collection('RSVPs').doc(name);
-    let valRef = docRef.set(rsvpMap);
-    res.send('Ok');
+      const doc = db.collection('RSVPs').doc(name);
+      doc.set(rsvpMap);
+      res.send('Ok');
+    } catch (err) {
+      console.log(err);
+      res.send('Something went wrong');
+    }
   }
 };
 

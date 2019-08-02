@@ -66,8 +66,12 @@ function submitRSVP(guestName) {
                   diet: dietary_restrictions};
 
   $.post(RSVP_URL, postBody, function(data, status) {
-    $('#forms').html('');
-    $('#welcome').html('RSVP Submitted!');
+    if (data == 'Ok') {
+      $('#forms').html('');
+      $('#welcome').html('RSVP Submitted!');
+    } else {
+      $('#forms').html('');
+      $('#welcome').html('Something went wrong. Please try again.');
   });
 }
 
