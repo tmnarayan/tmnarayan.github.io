@@ -4,7 +4,7 @@ const RSVP_URL = "https://us-central1-round-carver-683.cloudfunctions.net/saveRS
 function searchInvites() {
   var firstname = $('#firstname').val();
   var lastname = $('#lastname').val();
-  var searchUrl = "SEARCH_URL" + "?firstname=" + firstname +
+  var searchUrl = SEARCH_URL + "?firstname=" + firstname +
                   "&lastname=" + lastname;
   $.get(searchUrl, function(data, status) {
     var row = data;
