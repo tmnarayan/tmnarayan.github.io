@@ -87,6 +87,7 @@ $(document).ready(function() {
     $('#forms').html('');
     $('#names').html('');
     $('#success').css('display', 'none');
+    $('#welcome').css('display', 'none');
     searchInvites();
   });
 });
