@@ -72,6 +72,7 @@ function submitRSVP(guestName) {
     } else {
       $('#forms').html('');
       $('#welcome').html('Something went wrong. Please try again.');
+    }
   });
 }
 
