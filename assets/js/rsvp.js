@@ -70,7 +70,10 @@ function submitRSVP(guestName) {
     if (data == 'Ok') {
       $('#forms').html('');
       $('#names').html('');
+      $('#welcome').css('display', 'none');
       $('#names').css('display', 'none');
+      $('#success').css('display', 'block');
+      $('#success').html('RSVP Submitted!');
     } else {
       $('#forms').html('');
       $('#welcome').html('Something went wrong. Please try again.');
@@ -81,6 +84,11 @@ function submitRSVP(guestName) {
 $(document).ready(function() {
   $('#findinvite').click(function() {
     $('#error').css("display", "none");
+    $('#forms').html('');
+    $('#names').html('');
+    $('#welcome').css('display', 'block');
+    $('#names').css('display', 'block');
+    $('#success').css('display', 'none');
     searchInvites();
   });
 });
