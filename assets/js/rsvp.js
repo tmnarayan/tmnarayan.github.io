@@ -71,9 +71,9 @@ function submitRSVP(guestName) {
   });
 }
 
-$(document).ready {
+$(document).ready(function() {
   $('#findinvites').click(function() {
     $('#error').css("display", "hidden");
     searchInvites();
   });
-}
+});
