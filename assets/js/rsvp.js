@@ -40,10 +40,7 @@ function searchInvites() {
         submitRSVP(row[0]);
       });
     } else {
-      $('#welcome').text("Sorry, we couldn't find your invitation." +
-                         "Is there an alternate spelling of your name?\n" +
-                         "If that doesn't work, send me " +
-                         "an email at *trevor dot narayan at gmail dot com*.")
+      $('#error').css("display", "block");
     }
   });
 }

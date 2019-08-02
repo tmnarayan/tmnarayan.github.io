@@ -10,3 +10,11 @@ Do not RSVP yet, please. :)
 <button type="button" onclick="searchInvites()">Find Invitation</button>
 <div id='welcome'></div>
 <div id='forms'></div>
+<div id='error' style="display: none">
+Sorry, we couldn't find your invitation.
+
+Is there an alternate spelling of your name?
+
+If you continue to have trouble, just email me your RSVP directly at
+*trevor dot narayan at gmail dot com*.
+</div>
