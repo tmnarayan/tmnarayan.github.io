@@ -18,7 +18,7 @@ function searchInvites() {
 }
 
 function displayWelcome(name) {
-  $('#welcome').prepend(name + '<br>');
+  $('#welcome').prepend('<br>' + name + '<br><br>');
   $('#welcome').css("display", "inline-block");
 }
 
@@ -73,7 +73,7 @@ function submitRSVP(guestName) {
 
 $(document).ready(function() {
   $('#findinvite').click(function() {
-    $('#error').css("display", "hidden");
+    $('#error').css("display", "none");
     searchInvites();
   });
 });
