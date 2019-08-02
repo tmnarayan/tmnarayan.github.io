@@ -13,6 +13,6 @@ Do not RSVP yet, please. :)
 <div id='error' style="display: none">
 Sorry, we couldn't find your invitation.<br>
 Is there an alternate spelling of your name?<br>
-If you continue to have trouble, just email me your RSVP directly at
-<em>trevor dot narayan at gmail dot com<em>. ❤️
+If you continue to have trouble, just email me your RSVP directly at:<br>
+<em>trevor dot narayan at gmail dot com</em>. ❤️
 </div>
