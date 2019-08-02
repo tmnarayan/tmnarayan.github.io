@@ -1,5 +1,5 @@
 function generateSelectorHtml(label, numGuests, id) {
-  var base = label + ": <select id='" + id + "'>";
+  var base = "<br>" + label + ": <select id='" + id + "'>";
   for (i = 0; i <= numGuests; i++) {
     base += "<option value='" + i + "'>" + i + "</option>";
   }
@@ -40,9 +40,9 @@ function searchInvites() {
         submitRSVP(row[0]);
       });
     } else {
-      $('#welcome').text("Sorry, we couldn't find your invitation.<br><br>" +
-                         "Try again using your name as addressed on the" +
-                         "invitation.<br><br> If that doesn't work, send me" +
+      $('#welcome').text("Sorry, we couldn't find your invitation.\n" +
+                         "Is there an alternate spelling of your name?\n" +
+                         "If that doesn't work, send me" +
                          "an email at trevor dot narayan at gmail dot com.")
     }
   });
@@ -59,6 +59,7 @@ function submitRSVP(guestName) {
 
   let rsvpUrl = 'https://us-central1-round-carver-683.cloudfunctions.net/saveRSVP';
   $.post(rsvpUrl, postBody, function(data, status) {
+    $('#forms').html('');
     $('#welcome').html('RSVP Submitted!');
   });
 }
