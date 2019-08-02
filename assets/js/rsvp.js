@@ -14,30 +14,51 @@ function searchInvites() {
     "/searchInvites?firstname=" + firstname + "&lastname=" + lastname;
   $.get(searchUrl, function(data, status) {
     var row = data;
-    $('#welcome').html(row[0] + ":\n" +
-      "\nWe're delighted to welcome you on our special day!" +
-      "\nHow many guests from your party should we expect?");
-    if (row[3] > 0) {
-      var friday_html = generateSelectorHtml('Rehearsal Dinner', row[3], 'friday');
-      var saturday_html = generateSelectorHtml('Wedding & Receiption', row[4], 'saturday');
-      var sunday_html = generateSelectorHtml('Sunday Brunch', row[5], 'sunday');
-      $('#forms').html(friday_html);
-      $('#forms').append(saturday_html);
-      $('#forms').append(sunday_html);
-    } else if (row[3] == 0 && row[5] > 0) {
-      var saturday_html = generateSelectorHtml('Wedding & Receiption', row[4], 'saturday');
-      var sunday_html = generateSelectorHtml('Sunday Brunch', row[5], 'sunday');
-      $('#forms').html(saturday_html);
-      $('#forms').append(sunday_html);
+    if (row != '') {
+      $('#welcome').html(row[0] + ":\n" +
+        "\nWe're delighted to welcome you on our special day!" +
+        "\nHow many guests from your party should we expect?");
+      if (row[3] > 0) {
+        var friday_html = generateSelectorHtml('Rehearsal Dinner', row[3], 'friday');
+        var saturday_html = generateSelectorHtml('Wedding & Reception', row[4], 'saturday');
+        var sunday_html = generateSelectorHtml('Sunday Brunch', row[5], 'sunday');
+        $('#forms').html(friday_html);
+        $('#forms').append(saturday_html);
+        $('#forms').append(sunday_html);
+      } else if (row[3] == 0 && row[5] > 0) {
+        var saturday_html = generateSelectorHtml('Wedding & Reception', row[4], 'saturday');
+        var sunday_html = generateSelectorHtml('Sunday Brunch', row[5], 'sunday');
+        $('#forms').html(saturday_html);
+        $('#forms').append(sunday_html);
+      } else {
+        var saturday_html = generateSelectorHtml('Wedding & Reception', row[4], 'saturday');
+        $('#forms').html(saturday_html);
+      }
+      $('#forms').append("<br><br>Please inform us of any dietary restrictions: <input id='diet'></input>");
+      $('#forms').append("<button type='button' id='submitrsvp'>Submit RSVP!</button>");
+      $('#submitrsvp').click(function() {
+        submitRSVP(row[0]);
+      });
     } else {
-      var saturday_html = generateSelectorHtml('Wedding & Receiption', row[4], 'saturday');
-      $('#forms').html(saturday_html);
+      $('#welcome').text("Sorry, we couldn't find your invitation.<br><br>" +
+                         "Try again using your name as addressed on the" +
+                         "invitation.<br><br> If that doesn't work, send me" +
+                         "an email at trevor dot narayan at gmail dot com.")
     }
-    $('#forms').append("<br><br>Please inform us of any dietary restrictions: <input id='diet'></input>");
-    $('#forms').append("<button type='button' onclick='submitRSVP()'>Submit RSVP!</button>");
   });
 }
 
-function submitRSVP() {
+function submitRSVP(guestName) {
+  let friday_rsvp = $('#friday').val();
+  let saturday_rsvp = $('#saturday').val();
+  let sunday_rsvp = $('#sunday').val();
+  let dietary_restrictions = $('#diet').val();
+  let postBody = {name: guestName, friday: friday_rsvp,
+                  saturday: saturday_rsvp, sunday: sunday_rsvp,
+                  diet: dietary_restrictions};
 
+  let rsvpUrl = 'https://us-central1-round-carver-683.cloudfunctions.net/saveRSVP';
+  $.post(rsvpUrl, postBody, function(data, status) {
+    $('#welcome').html('RSVP Submitted!');
+  });
 }
