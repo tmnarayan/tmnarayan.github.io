@@ -9,7 +9,7 @@ We're excited to welcome you to Cincinnati!
 <div id='names' style="display:none; margin-top 20px;"></div>
 <div id='success' style='display: none;'></div>
 <div id='welcome' style="display: none;">
-We're hope you'll be able to join us on our special day!<br>
+We hope you'll be able to join us on our special day.<br>
 How many guests from your party should we expect?
 </div>
 <div id='forms'></div>
