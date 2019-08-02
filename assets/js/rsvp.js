@@ -72,7 +72,7 @@ function submitRSVP(guestName) {
 }
 
 $(document).ready(function() {
-  $('#findinvites').click(function() {
+  $('#findinvite').click(function() {
     $('#error').css("display", "hidden");
     searchInvites();
   });
