@@ -86,8 +86,6 @@ $(document).ready(function() {
     $('#error').css("display", "none");
     $('#forms').html('');
     $('#names').html('');
-    $('#welcome').css('display', 'block');
-    $('#names').css('display', 'block');
     $('#success').css('display', 'none');
     searchInvites();
   });
