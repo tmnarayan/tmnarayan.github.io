@@ -19,7 +19,7 @@ function searchInvites() {
 
 function displayWelcome(name) {
   $('#welcome').prepend(name + '<br>');
-  $('#welcome').css("display", "block");
+  $('#welcome').css("display", "inline-block");
 }
 
 function appendForm(row) {
@@ -65,14 +65,15 @@ function submitRSVP(guestName) {
                   saturday: saturday_rsvp, sunday: sunday_rsvp,
                   diet: dietary_restrictions};
 
-  let rsvpUrl = 'https://us-central1-round-carver-683.cloudfunctions.net/saveRSVP';
-  $.post(rsvpUrl, postBody, function(data, status) {
+  $.post(RSVP_URL, postBody, function(data, status) {
     $('#forms').html('');
     $('#welcome').html('RSVP Submitted!');
   });
 }
 
-$('#findinvites').click(function() {
-  $('#error').css("display", "hidden");
-  searchInvites();
-});
+$(document).ready {
+  $('#findinvites').click(function() {
+    $('#error').css("display", "hidden");
+    searchInvites();
+  });
+}
