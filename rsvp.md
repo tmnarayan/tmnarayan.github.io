@@ -5,15 +5,9 @@ If you've somehow reached this page, please note that it is currently not workin
 
 Do not RSVP yet, please. :)
 
-<div style="float:left;margin-right:20px;">
-    <input id="firstname" type="text" placeholder="First Name">
-</div>
-<div style="float:left;margin-right:20px;">
-    <input id="lastname" type="text" placeholder="Last Name">
-</div>
-<div style="float:left;">
-    <button type="button" id="findinvite">Find Invitation</button>
-</div>
+<input id="firstname" type="text" placeholder="First Name" style="margin-right:20px;">
+<input id="lastname" type="text" placeholder="Last Name" style="margin-right:20px;">
+<button type="button" id="findinvite">Find Invitation</button>
 <div id='welcome' style="display: none; margin-top:20px;">
 We're delighted to welcome you on our special day!<br>
 How many guests from your party should we expect?

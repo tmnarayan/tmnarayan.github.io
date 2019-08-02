@@ -12,14 +12,14 @@ function searchInvites() {
       displayWelcome(row[0]);
       appendForm(row);
     } else {
-      $('#error').css("display", "inline-block");
+      $('#error').css("display", "block");
     }
   });
 }
 
 function displayWelcome(name) {
   $('#welcome').prepend('<br>' + name + '<br><br>');
-  $('#welcome').css("display", "inline-block");
+  $('#welcome').css("display", "block");
 }
 
 function appendForm(row) {
