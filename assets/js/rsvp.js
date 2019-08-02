@@ -18,7 +18,8 @@ function searchInvites() {
 }
 
 function displayWelcome(name) {
-  $('#welcome').prepend('<br>' + name + '<br><br>');
+  $('#names').html('<br>' + name + '<br><br>');
+  $('#names').css("display", "block");
   $('#welcome').css("display", "block");
 }
 
@@ -68,7 +69,8 @@ function submitRSVP(guestName) {
   $.post(RSVP_URL, postBody, function(data, status) {
     if (data == 'Ok') {
       $('#forms').html('');
-      $('#welcome').html('RSVP Submitted!');
+      $('#names').html('');
+      $('#names').css('display', 'none');
     } else {
       $('#forms').html('');
       $('#welcome').html('Something went wrong. Please try again.');

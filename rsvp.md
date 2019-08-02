@@ -6,7 +6,9 @@ We're excited to welcome you to Cincinnati!
 <input id="firstname" type="text" placeholder="First Name" style="margin-right:20px;">
 <input id="lastname" type="text" placeholder="Last Name" style="margin-right:20px;">
 <button type="button" id="findinvite">Find Invitation</button>
-<div id='welcome' style="display: none; margin-top:20px;">
+<div id='names' style="display:none; margin-top 20px;"></div>
+<div id='success' style='display: none;'></div>
+<div id='welcome' style="display: none;">
 We're hope you'll be able to join us on our special day!<br>
 How many guests from your party should we expect?
 </div>
