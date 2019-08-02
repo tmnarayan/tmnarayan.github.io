@@ -9,10 +9,10 @@ function searchInvites() {
   $.get(searchUrl, function(data, status) {
     var row = data;
     if (row != '') {
-      displyWelcome(row[0]);
+      displayWelcome(row[0]);
       appendForm(row);
     } else {
-      $('#error').css("display", "block");
+      $('#error').css("display", "inline-block");
     }
   });
 }
