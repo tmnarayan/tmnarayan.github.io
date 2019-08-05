@@ -2,6 +2,7 @@ theme: jekyll-theme-primer
 title: MARGO & TREVOR
 navbar-links:
     HOME: "index"
+    RSVP: "rsvp"
     #SCHEDULE: "schedule"
     TRAVEL: "travel"
     REGISTRY: "registry"
